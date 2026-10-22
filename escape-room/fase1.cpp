@@ -90,20 +90,16 @@ void adicionarCor(Cor cor) {
 void conferirSenha() {
   tentativas++;
 
-  digitalWrite(
-    LED_VERDE,
-    resposta[0] == senha[0]
-  );
+  apagarLeds();
 
-  digitalWrite(
-    LED_AMARELO,
-    resposta[1] == senha[1]
-  );
-
-  digitalWrite(
-    LED_VERMELHO,
-    resposta[2] == senha[2]
-  );
+  for (int i = 0; i < 3; i++) {
+    if (resposta[i] == senha[i]) {
+      int pino = (senha[i] == VERDE)   ? LED_VERDE
+              : (senha[i] == AMARELO) ? LED_AMARELO
+                                      : LED_VERMELHO;
+      digitalWrite(pino, HIGH);
+    }
+  }
 
   bool acertou =
     resposta[0] == senha[0] &&

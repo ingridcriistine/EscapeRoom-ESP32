@@ -6,6 +6,7 @@
 extern const int LED_VERMELHO;
 extern const int LED_AMARELO;
 extern const int LED_VERDE;
+extern const int LEDs[3];
 
 extern const int BOTAO_B1;
 extern const int BOTAO_B2;

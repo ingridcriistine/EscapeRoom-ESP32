@@ -4,6 +4,12 @@ const int LED_VERMELHO = 19;
 const int LED_AMARELO = 18;
 const int LED_VERDE = 5;
 
+const int LEDs[3] = {
+  LED_VERDE,
+  LED_AMARELO,
+  LED_VERMELHO
+};
+
 const int BOTAO_B1 = 17;
 const int BOTAO_B2 = 16;
 const int BOTAO_B3 = 4;
